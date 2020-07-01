@@ -26,5 +26,15 @@
     ```
     This will provision the S3 Bucket on AWS.
 
+    ```bash
+    $ terraform output     
+    bucket_domain_name = rao-ksm-chartmuseum.s3.amazonaws.com
+    bucket_id = rao-ksm-chartmuseum
+    bucket_regional_domain_name = rao-ksm-chartmuseum.s3.us-west-2.amazonaws.com
+    hosted_zone_id = Z3BJ6K6RIION7M
+    region = us-west-2
+    terraform_state_bucket = arn:aws:s3:::rao-ksm-chartmuseum
+    ```
+
 
 
