@@ -1,40 +1,29 @@
-###  Setup Simple Amazon S3 Bucket using Terraform
+S3-Terraform
 
-### Instructions : 
+This repository contains Terraform code for creating and managing an Amazon S3 bucket. The code can be used to automate the process of creating an S3 bucket and configuring various settings for it.
 
-1. Create the AWS profile 
-    ```bash
-    aws configure --profile default
-    ```
-1. Update the variables values in the [terraform.tfvars](terraform.tfvars) file. 
-    ```bash
-    $ bat terraform.tfvars 
-    ───────┬────────────────────────────────────────────
-           │ File: terraform.tfvars
-    ───────┼────────────────────────────────────────────
-       1   │ aws_s3_bucket_name = "rao-ksm-chartmuseum"
-       2   │ aws_region = "us-west-2"
-       3   │ aws_profile = "default"
-    ───────┴────────────────────────────────────────────
-    ```
+Prerequisites
+In order to use this code, you must have the following installed:
 
-1. Provision the resources configured in the terraform config
-    ```bash
-    terraform init 
-    terraform plan
-    terraform apply 
-    ```
-    This will provision the S3 Bucket on AWS.
+Terraform
+AWS CLI
+You must also have valid AWS credentials with permissions to create an S3 bucket.
 
-    ```bash
-    $ terraform output     
-    bucket_domain_name = rao-ksm-chartmuseum.s3.amazonaws.com
-    bucket_id = rao-ksm-chartmuseum
-    bucket_regional_domain_name = rao-ksm-chartmuseum.s3.us-west-2.amazonaws.com
-    hosted_zone_id = Z3BJ6K6RIION7M
-    region = us-west-2
-    terraform_state_bucket = arn:aws:s3:::rao-ksm-chartmuseum
-    ```
+Usage
+To use this code, follow these steps:
 
+Clone the repository to your local machine.
+Navigate to the directory containing the code.
+Update the terraform.tfvars file with your desired bucket name and region.
+Run terraform init to initialize the Terraform configuration.
+Run terraform apply to create the S3 bucket and associated resources.
+Configuration
+The following configuration options are available in the terraform.tfvars file:
 
+bucket_name - The name of the S3 bucket to create.
+region - The region in which to create the S3 bucket.
+License
+This code is licensed under the MIT License. See the LICENSE file for more information.
 
+Contribution
+Contributions are welcome, feel free to open a pull request with your changes.
